@@ -7,30 +7,14 @@ on:
     inputs:
       board:
         description: "board"
-        default: "seeeduino_xiao_ble"
         required: true
+        default: "seeeduino_xiao_ble"
       shield:
         description: "shield"
         required: false
         default: "totem_left,totem_right,totem_dongle,settings_reset"
       alphas:
         description: "alphas"
-        required: false
-        default: "QWERTY"
-        type: choice
-        options:
-          - "default"
-          - "AZERTY"
-          - "BEAKL15"
-          - "Colemak"
-          - "ColemakDHK"
-          - "Dvorak"
-          - "Halmak"
-          - "QWERTY"
-          - "QWERTZ"
-          - "Workman"
-      tap:
-        description: "tap"
         required: false
         default: "QWERTY"
         type: choice
