@@ -1,70 +1,71 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
-name: 'Build Inputs'
+name: "Build Inputs"
 on:
   workflow_dispatch:
     inputs:
       board:
-        description: 'board'
+        description: "board"
+        default: "seeeduino_xiao_ble"
         required: true
       shield:
-        description: 'shield'
+        description: "shield"
         required: false
-        default: 'default'
+        default: "totem_left,totem_right,totem_dongle,settings_reset"
       alphas:
-        description: 'alphas'
+        description: "alphas"
         required: false
-        default: 'default'
+        default: "QWERTY"
         type: choice
         options:
-        - "default"
-        - "AZERTY"
-        - "BEAKL15"
-        - "Colemak"
-        - "ColemakDHK"
-        - "Dvorak"
-        - "Halmak"
-        - "QWERTY"
-        - "QWERTZ"
-        - "Workman"
+          - "default"
+          - "AZERTY"
+          - "BEAKL15"
+          - "Colemak"
+          - "ColemakDHK"
+          - "Dvorak"
+          - "Halmak"
+          - "QWERTY"
+          - "QWERTZ"
+          - "Workman"
       nav:
-        description: 'nav'
+        description: "nav"
         required: false
-        default: 'default'
+        default: "default"
         type: choice
         options:
-        - "default"
-        - "invertedT"
-        - "vi"
+          - "default"
+          - "invertedT"
+          - "vi"
       layers:
-        description: 'layers'
+        description: "layers"
         required: false
-        default: 'default'
+        default: "default"
         type: choice
         options:
-        - "default"
-        - "flip"
+          - "default"
+          - "flip"
       mapping:
-        description: 'mapping'
+        description: "mapping"
         required: false
-        default: 'default'
+        default: "default"
       custom_config:
-        description: 'custom_config'
+        description: "custom_config"
         required: false
-        default: 'default'
+        default: "default"
       kconfig:
-        description: 'kconfig'
+        description: "kconfig"
         required: false
-        default: 'default'
+        default: "default"
       branches:
-        description: 'branches'
+        description: "branches"
         required: false
-        default: 'default'
+        default: "default"
       modules:
-        description: 'modules'
+        description: "modules"
         required: false
-        default: 'default'
+        default: "default"
 jobs:
   process-inputs:
     runs-on: ubuntu-latest
